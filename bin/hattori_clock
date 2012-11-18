@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+def main
+  case Time.now.min
+  when 0
+    hour.times do
+      cuckoo
+    end
+  else
+    cuckoo
+  end
+end
+
+def hour
+  hour = Time.now.hour % 12
+  hour == 0 ? 12 : hour
+end
+
+def cuckoo
+  system 'afplay', File.expand_path('~/.cuckoo')
+end
+
+main
