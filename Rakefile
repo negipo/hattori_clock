@@ -69,7 +69,7 @@ namespace :uninstall do
     rm application_dest
   end
 
-  desc 'Remove and load launch agent'
+  desc 'Remove and unload launch agent'
   task :agent do
     agent_dest = File.join(AGENT_DIR, AGENT_FILE)
 
